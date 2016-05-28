@@ -1,0 +1,37 @@
+<html ng-app="app">
+	<head>
+		<title>My Angular app</title>
+		<script src="js/angular.js"></script>
+		<style>
+		  body {
+		  	font: 500 16px/1.4 'Helvetica Neue', Helvetica, Arial;
+				margin: 25px 175px;
+			}
+			.upload-zone {
+				border: 5px dashed #bbb;
+				border-radius: 5px;
+				text-align: center;
+				padding: 50px 100px;
+			}
+			.upload-zone a {
+				text-decoration: none;
+				background: rgba(0, 133, 215, 0.6);
+		    color: #fff;
+		    border-radius: 3px;
+		    box-shadow: 0 3px 0px 0px rgba(0, 133, 215, 1);
+		    font-size: 16px;
+		    border: none;
+		    cursor: pointer;
+		    padding: 10px 15px;
+		    margin-bottom: 3px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<file-upload></file-upload>
+
+		<script src="js/app.js"></script>
+		<script src="js/directives/FileUpload.js"></script>
+	</body>
+</html>
