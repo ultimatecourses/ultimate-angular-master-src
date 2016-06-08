@@ -1,0 +1,121 @@
+<html ng-app="app">
+	<head>
+		<title>My Angular app</title>
+		<script src="js/angular.js"></script>
+		<script src="js/angular-messages.js"></script>
+		<style>
+		form .ng-dirty.ng-invalid {
+			border: 1px solid red;
+		}
+		form .ng-valid {
+			border: 1px solid green;
+		}
+		</style>
+		<script type="text/ng-template" id="generic-messages.html">
+			<div ng-message="required">
+				This field is required, please fill it in
+			</div>
+			<div ng-message="minlength">
+				This field is too short
+			</div>
+		</script>
+	</head>
+	<body>
+		<form
+			novalidate
+			name="register"
+			ng-controller="CheckoutController as checkout"
+			ng-submit="checkout.onSubmit();">
+
+			<h4>Checkout</h4>
+			<p>Fill in your details to complete your order</p>
+
+			<label>
+				Username
+				<input
+					type="text"
+	        name="username"
+	        placeholder="Username"
+	        ng-model="checkout.details.username"
+					ng-minlength="2"
+	        required="required">
+			</label>
+
+			<div
+				ng-if="register.username.$touched"
+				ng-messages="register.username.$error">
+				<!-- <div ng-message="required">
+					This field is required!
+				</div> -->
+				<div ng-message="minlength">
+					Minimum of 2 characters
+				</div>
+				<div ng-messages-include="generic-messages.html"></div>
+			</div>
+
+			<label>
+				Password
+				<input
+					placeholder="Password"
+	        type="password"
+	        name="password"
+	        ng-model="checkout.details.password"
+					ng-minlength="8"
+					ng-maxlength="20"
+					ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/"
+	        required="required">
+			</label>
+
+			<div
+				ng-if="register.password.$touched"
+				ng-messages="register.password.$error"
+				ng-messages-multiple>
+				<div ng-message="required">
+					This is field required!
+				</div>
+				<div ng-message="pattern">
+					Password should contain at least one digit,
+					at least one lower case, at least one upper case
+				</div>
+				<div ng-message="minlength">
+					Minimum of 8 characters
+				</div>
+				<div ng-message="maxlength">
+					Maximum of 20 characters
+				</div>
+			</div>
+
+			<label>
+				Coupon
+				<input
+					placeholder="Coupon"
+					type="text"
+					name="coupon"
+					ng-model="checkout.details.coupon"
+					required="required"
+	        coupon-format>
+			</label>
+
+			<div
+				ng-if="register.coupon.$touched"
+				ng-messages="register.coupon.$error">
+				<div ng-message="required">
+					This is field required!
+				</div>
+				<div ng-message="coupon">
+					Invalid coupon!
+					Must be characters, followed by an underscore and 2 digits.
+				</div>
+			</div>
+
+			<button type="submit">
+				Checkout
+			</button>
+
+		</form>
+
+		<script src="js/app.js"></script>
+		<script src="js/directives/couponFormat.js"></script>
+		<script src="js/controllers/CheckoutController.js"></script>
+	</body>
+</html>
