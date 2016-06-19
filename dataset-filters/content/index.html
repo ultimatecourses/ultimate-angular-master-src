@@ -1,0 +1,37 @@
+<html ng-app="app">
+	<head>
+		<title>My Angular app</title>
+		<script src="js/angular.js"></script>
+		<style>
+		ul { margin: 0; padding: 0; border-radius: 3px; overflow: hidden; }
+		ul li { overflow: hidden; padding: 0 15px; }
+		.male { background: #2c3e50; color: #fff; }
+		.female { background: #d35400; color: #fff; }
+		</style>
+	</head>
+	<body>
+
+		<div ng-controller="TournamentController as tournament">
+			Filter by:
+			<a href="" ng-click="gender = undefined">All</a>
+			<a href="" ng-click="gender = 'male'">Male</a>
+			<a href="" ng-click="gender = 'female'">Female</a>
+			<ul>
+				<li ng-repeat="player in tournament.players | gender:gender | orderBy:'rank'" ng-class="{
+					male: player.gender === 'male',
+					female: player.gender === 'female'
+				}">
+					<p>
+						{{ player.name }}
+						<span>{{ player.rank | ordinal }}</span>
+					</p>
+				</li>
+			</ul>
+		</div>
+
+		<script src="js/app.js"></script>
+		<script src="js/controllers/TournamentController.js"></script>
+		<script src="js/filters/ordinal.js"></script>
+		<script src="js/filters/gender.js"></script>
+	</body>
+</html>
