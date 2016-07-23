@@ -7,7 +7,7 @@ var home = {
 angular
 	.module('home')
 	.component('home', home)
-  .config(function ($stateProvider, $urlRouterProvider, $transitionsProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $transitionsProvider, $locationProvider) {
     $transitionsProvider.onStart({
 			to: function (state) {
 				return !!(state.data && state.data.requiredAuth);
@@ -22,4 +22,5 @@ angular
         component: 'home'
       });
     $urlRouterProvider.otherwise('/');
+		// $locationProvider.html5Mode(true);
   });
