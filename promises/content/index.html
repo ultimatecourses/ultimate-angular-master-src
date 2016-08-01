@@ -1,0 +1,31 @@
+<html ng-app="app">
+	<head>
+		<title>My Angular app</title>
+		<script src="js/angular.js"></script>
+		<style>
+		body { padding: 50px; }
+		a { margin: 0 15px 0 0; color: #fff; background: #337ab7; border-radius: 3px; padding: 6px 15px; text-decoration: none; }
+		</style>
+	</head>
+	<body>
+
+		<div ng-controller="DemoController as demo">
+			<a href="" ng-click="demo.requestTodos();">
+				Get todos
+			</a>
+			<a href="" ng-click="demo.requestComments();">
+				Get comments
+			</a>
+			<a href="" ng-click="demo.requestAll();">
+				Get all
+			</a>
+			<a href="" ng-click="demo.requestRace();">
+				Request race
+			</a>
+		</div>
+
+		<script src="js/app.js"></script>
+		<script src="js/controllers/DemoController.js"></script>
+		<script src="js/services/DemoService.js"></script>
+	</body>
+</html>

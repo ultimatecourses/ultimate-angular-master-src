@@ -1,0 +1,13 @@
+<html ng-app="app">
+	<head>
+		<title>My Angular app</title>
+		<script src="js/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="AuthController as auth">
+			<pre>{{ auth | json }}</pre>
+		</div>
+		<script src="js/app.js"></script>
+		<script src="js/controllers/AuthController.js"></script>
+	</body>
+</html>
