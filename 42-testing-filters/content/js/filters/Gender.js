@@ -1,13 +1,13 @@
 function Gender() {
-  return function (value, gender) {
-    if (!gender) return value;
+	return function (value, gender) {
+		if (!gender) return value;
 
-    return value.filter(function (item) {
-      return item.gender === gender;
-    });
-  }
+		return value.filter(function (item) {
+			return item.gender === gender;
+		});
+	}
 }
 
 angular
-  .module('app')
-  .filter('gender', Gender);
+	.module('app')
+	.filter('gender', Gender);

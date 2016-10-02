@@ -9,7 +9,7 @@ angular
 	.component('about', about)
 	.config(function ($stateProvider) {
 		$stateProvider
-		  .state('about', {
+			.state('about', {
 				url: '/about',
 				component: 'about'
 			});

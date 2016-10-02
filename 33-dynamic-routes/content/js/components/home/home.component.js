@@ -7,8 +7,8 @@ var home = {
 angular
 	.module('home')
 	.component('home', home)
-  .config(function ($stateProvider, $urlRouterProvider, $transitionsProvider, $locationProvider) {
-    $transitionsProvider.onStart({
+	.config(function ($stateProvider, $urlRouterProvider, $transitionsProvider, $locationProvider) {
+		$transitionsProvider.onStart({
 			to: function (state) {
 				return !!(state.data && state.data.requiredAuth);
 			}
@@ -17,10 +17,10 @@ angular
 		});
 
 		$stateProvider
-      .state('home', {
-        url: '/',
-        component: 'home'
-      });
-    $urlRouterProvider.otherwise('/');
+			.state('home', {
+				url: '/',
+				component: 'home'
+			});
+		$urlRouterProvider.otherwise('/');
 		// $locationProvider.html5Mode(true);
-  });
+	});

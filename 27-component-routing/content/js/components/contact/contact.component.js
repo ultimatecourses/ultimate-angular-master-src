@@ -9,7 +9,7 @@ angular
 	.component('contact', contact)
 	.config(function ($stateProvider) {
 		$stateProvider
-		  .state('contact', {
+			.state('contact', {
 				url: '/contact',
 				component: 'contact'
 			});

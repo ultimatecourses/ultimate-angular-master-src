@@ -1,7 +1,7 @@
 function MainController() {
-  this.count = 5;
+	this.count = 5;
 }
 
 angular
-  .module('app')
-  .controller('MainController', MainController);
+	.module('app')
+	.controller('MainController', MainController);

@@ -1,9 +1,9 @@
 function TodoService($resource, $http) {
 	return $resource('http://jsonplaceholder.typicode.com/todos/:id', {}, {
-    delete: {
-      method: 'DELETE'
-    }
-  });
+		delete: {
+			method: 'DELETE'
+		}
+	});
 }
 
 angular

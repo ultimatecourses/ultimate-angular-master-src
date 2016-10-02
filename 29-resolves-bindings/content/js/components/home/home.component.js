@@ -7,11 +7,11 @@ var home = {
 angular
 	.module('home')
 	.component('home', home)
-  .config(function ($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('home', {
-        url: '/',
-        component: 'home'
-      });
-    $urlRouterProvider.otherwise('/');
-  });
+	.config(function ($stateProvider, $urlRouterProvider) {
+		$stateProvider
+			.state('home', {
+				url: '/',
+				component: 'home'
+			});
+		$urlRouterProvider.otherwise('/');
+	});

@@ -18,7 +18,7 @@ function ErrorMessage() {
 				$element.addClass('error--' + $attrs.type);
 				console.log(2);
 			};
-    }
+		}
 	}
 }
 

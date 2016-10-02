@@ -9,7 +9,7 @@ angular
 	.component('home', home)
 	.config(function ($stateProvider, $urlRouterProvider) {
 		$stateProvider
-		  .state('home', {
+			.state('home', {
 				url: '/',
 				component: 'home'
 				// template: '<home></home>'

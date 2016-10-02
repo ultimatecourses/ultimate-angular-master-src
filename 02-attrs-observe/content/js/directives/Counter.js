@@ -8,7 +8,7 @@ function counter() {
 				<div>
 					<a href="" ng-click="counter.updateName()">
 						Update name
-				  </a>
+					</a>
 				</div>
 			</div>
 		`,
