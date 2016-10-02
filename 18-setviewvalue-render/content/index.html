@@ -2,31 +2,31 @@
 	<head>
 		<title>My Angular app</title>
 		<script src="js/angular.js"></script>
-    <style>
-      div[contenteditable] {
-        background: rgba(0, 0, 0, 0.1);
-        padding: 10px 15px;
-        border-radius: 5px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-      }
-    </style>
+		<style>
+			div[contenteditable] {
+				background: rgba(0, 0, 0, 0.1);
+				padding: 10px 15px;
+				border-radius: 5px;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+			}
+		</style>
 	</head>
 	<body>
 
-    <div ng-controller="HTMLController as html">
-      <div html-editor contenteditable ng-model="html.content">
-        Some
-      </div>
-      <p>{{ html.content }}</p>
-      <div>
-        <a href="" ng-click="html.reset()">
+		<div ng-controller="HTMLController as html">
+			<div html-editor contenteditable ng-model="html.content">
+				Some
+			</div>
+			<p>{{ html.content }}</p>
+			<div>
+				<a href="" ng-click="html.reset()">
 					Reset
 				</a>
-      </div>
-    </div>
+			</div>
+		</div>
 
 		<script src="js/app.js"></script>
-    <script src="js/directives/HTMLEditor.js"></script>
-    <script src="js/controllers/HTMLController.js"></script>
+		<script src="js/directives/HTMLEditor.js"></script>
+		<script src="js/controllers/HTMLController.js"></script>
 	</body>
 </html>

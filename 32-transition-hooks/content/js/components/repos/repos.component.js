@@ -1,8 +1,8 @@
 var repos = {
-  bindings: {
-    list: '<'
-  },
-  template: `
+	bindings: {
+		list: '<'
+	},
+	template: `
 		<div class="repos">
 			My Repos:
 			<ul>
@@ -20,15 +20,15 @@ var repos = {
 angular
 	.module('repos')
 	.component('repos', repos)
-  .config(function ($stateProvider) {
-    $stateProvider
-      .state('repos', {
-        url: '/repos',
-        component: 'repos',
-        resolve: {
-          list: function (ReposService) {
-            return ReposService.getRepos();
-          }
-        }
-      });
-  });
+	.config(function ($stateProvider) {
+		$stateProvider
+			.state('repos', {
+				url: '/repos',
+				component: 'repos',
+				resolve: {
+					list: function (ReposService) {
+						return ReposService.getRepos();
+					}
+				}
+			});
+	});

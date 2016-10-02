@@ -7,14 +7,14 @@ var contactPhone = {
 angular
 	.module('contact')
 	.component('contactPhone', contactPhone)
-  .config(function ($stateProvider) {
-    $stateProvider
-      .state('contact.phone', {
-        url: '^/phone',
-        views: {
+	.config(function ($stateProvider) {
+		$stateProvider
+			.state('contact.phone', {
+				url: '^/phone',
+				views: {
 					'details@contact': {
 						component: 'contactPhone'
 					}
 				}
-      });
-  });
+			});
+	});

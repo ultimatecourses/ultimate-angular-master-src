@@ -1,4 +1,4 @@
 angular
-  .module('repos', [
-    'ui.router'
-  ]);
+	.module('repos', [
+		'ui.router'
+	]);

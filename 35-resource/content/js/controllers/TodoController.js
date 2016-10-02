@@ -2,9 +2,9 @@ function TodoController(TodoService) {
 
 	var ctrl = this;
 
-  ctrl.title = '';
+	ctrl.title = '';
 
-  ctrl.list = TodoService.query();
+	ctrl.list = TodoService.query();
 
 	ctrl.singleTodo = TodoService.get({
 		id: 1

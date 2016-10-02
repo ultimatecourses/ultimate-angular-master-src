@@ -1,4 +1,4 @@
 angular
-  .module('home', [
-    'ui.router'
-  ]);
+	.module('home', [
+		'ui.router'
+	]);

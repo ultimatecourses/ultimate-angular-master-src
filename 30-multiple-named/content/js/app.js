@@ -1,7 +1,7 @@
 angular
 	.module('app', [
-    'home',
-    'about',
-    'contact',
+		'home',
+		'about',
+		'contact',
 		'repos'
-  ]);
+	]);

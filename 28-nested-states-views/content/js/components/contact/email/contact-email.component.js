@@ -8,9 +8,9 @@ angular
 	.module('contact')
 	.component('contactEmail', contactEmail)
 	.config(function ($stateProvider) {
-    $stateProvider
-      .state('contact.email', {
-        url: '/email',
-        component: 'contactEmail'
-      });
-  });
+		$stateProvider
+			.state('contact.email', {
+				url: '/email',
+				component: 'contactEmail'
+			});
+	});

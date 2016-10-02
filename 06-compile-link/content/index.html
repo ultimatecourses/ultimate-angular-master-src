@@ -10,17 +10,17 @@
 		</style>
 	</head>
 	<body>
-    <div ng-controller="ErrorController as errors">
-      <div
-        ng-repeat="error in errors.list"
-        error-message
-        type="{{ error.type }}">
-        {{ error.message }}
-      </div>
-    </div>
+		<div ng-controller="ErrorController as errors">
+			<div
+				ng-repeat="error in errors.list"
+				error-message
+				type="{{ error.type }}">
+				{{ error.message }}
+			</div>
+		</div>
 
 		<script src="js/app.js"></script>
 		<script src="js/directives/ErrorMessage.js"></script>
-    <script src="js/controllers/ErrorController.js"></script>
+		<script src="js/controllers/ErrorController.js"></script>
 	</body>
 </html>

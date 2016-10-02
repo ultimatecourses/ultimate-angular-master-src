@@ -7,10 +7,10 @@
 	<body>
 
 		<div ng-controller="TodoController as todos">
-      <form ng-submit="todos.addTodo()">
-        <input type="text" ng-model="todos.title">
-        <button type="submit">Add todo</button>
-      </form>
+			<form ng-submit="todos.addTodo()">
+				<input type="text" ng-model="todos.title">
+				<button type="submit">Add todo</button>
+			</form>
 			<div>
 				Single todo:
 				{{ todos.singleTodo }}
@@ -18,10 +18,10 @@
 			<ul>
 				<li ng-repeat="todo in todos.list">
 					<input ng-model="todo.title" ng-blur="todos.updateTodo(todo);">
-          <div>
-            {{ todo.completed ? 'Completed' : 'Not Completed' }}
-          </div>
-          <a href="" ng-click="todos.deleteTodo(todo);">
+					<div>
+						{{ todo.completed ? 'Completed' : 'Not Completed' }}
+					</div>
+					<a href="" ng-click="todos.deleteTodo(todo);">
 						Delete Todo
 					</a>
 				</li>
