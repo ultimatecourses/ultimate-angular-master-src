@@ -1,4 +1,6 @@
-# Angular 1.x Pro Source code
+<a href="https://ultimateangular.com" target="_blank"><img src="https://toddmotto.com/img/ua.png?new"></a>
+
+# Ultimate Angular: Angular 1.x Pro Source code
 
 Source code for Ultimate Angular 1.x [Pro Course](https://ultimateangular.com).
 
