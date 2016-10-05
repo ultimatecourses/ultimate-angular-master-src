@@ -1,4 +1,4 @@
-# Angular 1.x Pro Sourcecode
+# Angular 1.x Pro Source code
 
 Source code for Ultimate Angular 1.x [Pro Course](https://ultimateangular.com).
 
