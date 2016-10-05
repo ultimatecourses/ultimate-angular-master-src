@@ -1,6 +1,6 @@
-# Master Sourcecode
+# Angular 1.x Pro Sourcecode
 
-The Master Course source code for Ultimate AngularJS [Master course](https://courses.toddmotto.com).
+Source code for Ultimate Angular 1.x [Pro Course](https://ultimateangular.com).
 
 ### Running these projects
 
